@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:recipe_app_ui/screen/home_screen.dart';
 
 class OnbaordingScreen extends StatelessWidget {
   const OnbaordingScreen({super.key});
@@ -71,7 +73,14 @@ class OnbaordingScreen extends StatelessWidget {
                     ),
                     //get started button
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const HomeScreen(),
+                          ),
+                        );
+                      },
                       child: Container(
                         height: 55,
                         decoration: BoxDecoration(
